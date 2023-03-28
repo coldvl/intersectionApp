@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intersection/intersection.dart';
 import 'package:intersection/cartesian_product.dart';
+import 'package:intersection/symettric_difference.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,6 +27,18 @@ class HomePage extends StatelessWidget {
                   );
                 },
                 child: const Text('Calculate Intersection'),
+              ),
+              //add a button to navigate to the symettric difference screen
+              const SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SetSymettricDifference()),
+                  );
+                },
+                child: const Text('Calculate Symettric Difference'),
               ),
               const SizedBox(height: 16.0),
               ElevatedButton(
